@@ -1,0 +1,97 @@
+@charset "UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-color: #FFFF99;
+/*height: 500px;*/
+/*background-image: url("/kadai/images/kabegami1.jpg");*/
+
+}
+.wrapper{
+	width:50%;
+	margin:5rem auto;
+	background-color: white;
+	padding: 3rem;
+	border-radius: 10px;
+}
+h1{
+	color: #111;
+	
+}
+p{
+	line-height: 2;
+}
+.br,.mb{
+	display: none;
+	}
+
+.marquee {
+background-color: white; /* 背景色 */
+width: 300px; /* 横幅 */
+}
+
+.marquee > span {
+display: inline-block;
+white-space: nowrap;
+animation-name: MarqueeScroll;
+animation-timing-function: linear;
+animation-duration: 0.1s; /* 1周するのにかかる時間 */
+animation-iteration-count: inherit; /* 繰り返す回数 */
+}
+
+@keyframes MarqueeScroll {
+from { transform: translateY(-50%);}
+to { transform: translateY(0%);}
+}
+
+.marquee2 {
+background-color: white; /* 背景色 */
+width: 300px; /* 横幅 */
+overflow: hidden;
+}
+
+.marquee2 > span {
+display: inline-block;
+white-space: nowrap;
+padding-left: 100%;
+animation-name: Marquee2Scroll;
+animation-timing-function: linear;
+animation-duration: 7s; /* 1周するのにかかる時間 */
+animation-iteration-count: infinite; /* 繰り返す回数 */
+}
+
+@keyframes Marquee2Scroll {
+from { transform: translateX(0);}
+to { transform: translateX(-100%);}
+}
+
+
+
+/*ここからメディアクエリ*/
+@media screen and (max-width: 600px) {
+	
+body{
+	background-color: rgb(64, 0, 128);
+}
+.wrapper{
+	width: 85%;
+	margin:5rem auto;
+	background-color: white;
+	text-align: center;
+}
+h1{
+	font-size: 24px;
+	color: #00f;
+}
+p{
+	font-size: 0.8rem;
+	color: #00f;
+}	
+.br,.mb{
+	display: block;
+	color: #f00;
+}
+	
+}	
